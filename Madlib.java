@@ -1,4 +1,4 @@
-import java.util.Scanner
+import java.util.Scanner;
 
 public class MadLib{
    public static void main(String args[]){
@@ -11,22 +11,44 @@ public class MadLib{
    String bodyPartOne = "";
    String bodyPartTwo = "";
    String noun = "";
-   String Animal = "";
+   String animal = "";
    String adjectiveTwo = "";
    String adjectiveThree = "";
-   Stinring adjectiveFour = "";
+   String adjectiveFour = "";
    
-   System.out.ptintln("Enter a color : ");
+   System.out.println("Enter a color: ");
    color = scnr.nextLine();
-   System.out.ptintln("Enter a superlative. (Ending in 'est'): ");
+   System.out.println("Enter a superlative. (Ending in 'est'): ");
    superlative = scnr.nextLine();
-   System.out.ptintln("Enter an adjective: "
+   System.out.println("Enter an adjective: ");
    adjectiveOne = scnr.nextLine();
-   System.out.ptintln("Enter a plural body part: ");
-   bodyPartOne = scnr.nextLine():
-   System.out.ptintln("Enter a noun: ");
+   System.out.println("Enter a plural body part: ");
+   bodyPartOne = scnr.nextLine();
+   System.out.println("Enter a noun: ");
    noun = scnr.nextLine();
-   System.out.ptintln("Enter a plural animal: ");
+   System.out.println("Enter a body part:" );
+   bodyPartTwo = scnr.nextLine();
+   System.out.println("Enter a plural animal: ");
    animal = scnr.nextLine();
-   System.out.ptintln("Enter an adjective: ");
+   System.out.println("Enter an adjective: ");
    adjectiveTwo = scnr.nextLine();
+   System.out.println("Enter an adjective: ");
+   adjectiveThree = scnr.nextLine();
+   System.out.println("Enter an adjective: ");
+   adjectiveFour = scnr.nextLine();
+   
+   System.out.println("The " + color + " Dragon is the " + superlative + " Dragon of all.");
+   System.out.println("It has " + adjectiveOne + " " + bodyPartOne + ", and has a " + bodyPartTwo + " shaped like a " + noun + ".");
+   System.out.println("It loves to eat " + animal + ",although it will feast on nearly anything.");
+   System.out.println("It is " + adjectiveTwo + " and " + adjectiveThree + ".");
+   System.out.println("You must be " + adjectiveFour + " around it, or you may end up is's next meal.");
+   
+   
+   
+   
+   
+   
+   
+   
+   }
+}      

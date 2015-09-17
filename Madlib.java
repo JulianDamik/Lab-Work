@@ -42,13 +42,5 @@ public class MadLib{
    System.out.println("It loves to eat " + animal + ",although it will feast on nearly anything.");
    System.out.println("It is " + adjectiveTwo + " and " + adjectiveThree + ".");
    System.out.println("You must be " + adjectiveFour + " around it, or you may end up is's next meal.");
-   
-   
-   
-   
-   
-   
-   
-   
    }
 }      

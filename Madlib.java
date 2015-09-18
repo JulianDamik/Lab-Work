@@ -15,6 +15,8 @@ public class MadLib{
    String adjectiveTwo = "";
    String adjectiveThree = "";
    String adjectiveFour = "";
+   String favChar = "";
+   int counter = 0;
    
    System.out.println("Enter a color: ");
    color = scnr.nextLine();
@@ -42,5 +44,13 @@ public class MadLib{
    System.out.println("It loves to eat " + animal + ",although it will feast on nearly anything.");
    System.out.println("It is " + adjectiveTwo + " and " + adjectiveThree + ".");
    System.out.println("You must be " + adjectiveFour + " around it, or you may end up is's next meal.");
+   
+   System.out.println("Please enter you favorite character: " );
+   favChar = scnr.next();
+   
+   if (color.indexOf(favChar) != -1){
+      counter = counter + 1;
+      }
+      
    }
 }      

@@ -5,9 +5,10 @@ public class TweetDecoderPart2 {
       Scanner scnr = new Scanner(System.in);
       String origTweet = "";
       String userTweet = "";
+      String convertTweet = "";
 
       System.out.println("Enter abbreviation from tweet: ");
-      origTweet = scnr.next();
+      origTweet = scnr.nextLine();
 
       if (origTweet.equalsIgnoreCase("LOL")) {
          System.out.println("LOL = laughing out loud");
@@ -51,9 +52,9 @@ public class TweetDecoderPart2 {
         else {
          System.out.println("Sorry, don't know that one.");
       }
-
+      //part 3
       System.out.println("Please enter a Tweet. 140 characters or less: ");
-      userTweet = scnr.next();
+      userTweet = scnr.nextLine();
      
       if (userTweet.length() <= 141){
          System.out.println(userTweet);
@@ -61,7 +62,12 @@ public class TweetDecoderPart2 {
       else{
          System.out.println("Your Tweet is too long");
          }
-          return;
+      //part 4  
+      if (userTweet.indexOf("LOL") != -1)
+        convertTweet = userTweet.replace("LOL", "laughing out loud");
+        }
+       
+      return;
    }
 }
 

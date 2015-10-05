@@ -67,7 +67,5 @@ public class TweetDecoderPart2 {
         convertTweet = userTweet.replace("LOL", "laughing out loud");
         }
        
-      return;
-   }
-}
+     }
 

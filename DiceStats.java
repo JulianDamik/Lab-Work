@@ -26,7 +26,8 @@ public class DiceStats {
 
       System.out.println("Enter number of rolls: ");
       numRolls = scnr.nextInt();
-   
+  
+   while (numRolls > 1){
       if (numRolls >= 1) {
          // Roll dice numRoll times
          for (i = 0; i < numRolls; ++i) {
@@ -92,6 +93,10 @@ public class DiceStats {
       else {
          System.out.println("Invalid rolls. Try again.");
       }
+      numRolls = 0;
+      System.out.println("Enter number of rolls: ");
+      numRolls = scnr.nextInt();
+     }
     
       
 

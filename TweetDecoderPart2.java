@@ -56,16 +56,58 @@ public class TweetDecoderPart2 {
       System.out.println("Please enter a Tweet. 140 characters or less: ");
       userTweet = scnr.nextLine();
      
-      if (userTweet.length() <= 141){
+      if (userTweet.length() < 141){
          System.out.println(userTweet);
          }
       else{
          System.out.println("Your Tweet is too long");
          }
+         
+      if (userTweet.indexOf("LOL") != -1){
+         System.out.println("LOL = laughing out loud");
+         }
+      if (userTweet.indexOf("BFN") != -1){
+         System.out.println("BFN = bye for now");
+         }
+      if (userTweet.indexOf("FTW") != -1){
+         System.out.println("FTW = for the win");
+         }
+      if (userTweet.indexOf("IRL") != -1){
+         System.out.println("IRL = in real life");
+         }
+      if (userTweet.indexOf("DM") != -1){
+         System.out.println("DM = direct message");
+         }
+      if (userTweet.indexOf("FF") != -1){
+         System.out.println("FF = for friday");
+         }
+      if (userTweet.indexOf("RT") != -1){
+         System.out.println("RT = retweet");
+         }
+
       //part 4  
-      if (userTweet.indexOf("LOL") != -1)
+      if (userTweet.indexOf("LOL") != -1){
         convertTweet = userTweet.replace("LOL", "laughing out loud");
         }
-       
-     }
+      if (userTweet.indexOf("BFN") != -1){
+        convertTweet = convertTweet.replace("BFN", "bye for now");
+        }
+      if (userTweet.indexOf("FTW") != -1){
+        convertTweet = convertTweet.replace("FTW", "for the win");
+        }
+      if (userTweet.indexOf("IRL") != -1){
+        convertTweet = convertTweet.replace("IRL", "in real life");
+        }
+      if (userTweet.indexOf("DM") != -1){
+        convertTweet = convertTweet.replace("DM", "direct message");
+        }
+      if (userTweet.indexOf("FF") != -1){
+        convertTweet = convertTweet.replace("FF", "for friday");
+        }
+      if (userTweet.indexOf("RT") != -1){
+        convertTweet = convertTweet.replace("RT", "retweet");
+        }
 
+      System.out.println("your converted Tweet: " + convertTweet);
+     }
+}

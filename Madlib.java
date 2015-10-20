@@ -45,7 +45,7 @@ public class MadLib{
    System.out.println("It is " + adjectiveTwo + " and " + adjectiveThree + ".");
    System.out.println("You must be " + adjectiveFour + " around it, or you may end up is's next meal.");
    
-   System.out.println("Please enter you favorite character: " );
+   System.out.println("Please enter you favorite letter: " );
    favChar = scnr.next();
    
    if (color.indexOf(favChar) != -1){

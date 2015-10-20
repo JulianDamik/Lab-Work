@@ -51,6 +51,33 @@ public class MadLib{
    if (color.indexOf(favChar) != -1){
       counter = counter + 1;
       }
-      
+   if (superlative.indexOf(favChar) != -1){
+      counter = counter + 1;
+      }
+   if (adjectiveOne.indexOf(favChar) != -1){
+      counter = counter + 1;
+      }
+   if (bodyPartOne.indexOf(favChar) != -1){
+      counter = counter + 1;
+      }
+   if (bodyPartTwo.indexOf(favChar) != -1){
+      counter = counter + 1;
+      }
+   if (noun.indexOf(favChar) != -1){
+      counter = counter + 1;
+      }
+   if (animal.indexOf(favChar) != -1){
+      counter = counter + 1;
+      }
+   if (adjectiveTwo.indexOf(favChar) != -1){
+      counter = counter + 1;
+      }
+   if (adjectiveThree.indexOf(favChar) != -1){
+      counter = counter + 1;
+      }
+   if (adjectiveFour.indexOf(favChar) != -1){
+      counter = counter + 1;
+      }
+   System.out.println("# of words that contained " + favChar + ": " + counter);
    }
 }      

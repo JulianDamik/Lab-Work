@@ -25,7 +25,7 @@ public class HealthData {
       calsBurned = userAgeDays * 1620;
       breathsPerDay = userAgeDays * 28800; 
 
-      System.out.println("You are " + userAgeDays + " days old.");
+      System.out.println("You are about " + userAgeDays + " days old.");
       System.out.println("You are about " + hours + " hours old.");
       System.out.println("You are about " + minutes + " minutes old.");
       System.out.println("You are about " + seconds + " seconds old.");

@@ -92,66 +92,66 @@ public class DiceStats {
          System.out.println("Dice roll histogram; ");
     
          System.out.print("2: ");
-         for (int histVar = 0; histVar <= numTwos; histVar++){
+         for (int histVar = 1; histVar <= numTwos; histVar++){
             System.out.print("*");
            } 
          
          System.out.println();
          System.out.print("3: ");
-         for (int histVar = 0; histVar <= numThrees; histVar++){
+         for (int histVar = 1; histVar <= numThrees; histVar++){
             System.out.print("*");
            } 
          
          System.out.println();
          System.out.print("4: ");
-         for (int histVar = 0; histVar <= numFours; histVar++){
+         for (int histVar = 1; histVar <= numFours; histVar++){
             System.out.print("*");
            }
            
          System.out.println(); 
          System.out.print("5: ");
-         for (int histVar = 0; histVar <= numFives; histVar++){
+         for (int histVar = 1; histVar <= numFives; histVar++){
             System.out.print("*");
            } 
          
          System.out.println();
          System.out.print("6: ");
-         for (int histVar = 0; histVar <= numSixes; histVar++){
+         for (int histVar = 1; histVar <= numSixes; histVar++){
             System.out.print("*");
            }  
         
          System.out.println();
          System.out.print("7: ");
-         for (int histVar = 0; histVar <= numSevens; histVar++){
+         for (int histVar = 1; histVar <= numSevens; histVar++){
             System.out.print("*");
            } 
         
          System.out.println();
          System.out.print("8: ");
-         for (int histVar = 0; histVar <= numEights; histVar++){
+         for (int histVar = 1; histVar <= numEights; histVar++){
             System.out.print("*");
            } 
            
          System.out.println();
          System.out.print("9: ");
-         for (int histVar = 0; histVar <= numNines; histVar++){
+         for (int histVar = 1; histVar <= numNines; histVar++){
             System.out.print("*");
            } 
 
          System.out.println();
          System.out.print("10: ");
-         for (int histVar = 0; histVar <= numTens; histVar++){
+         for (int histVar = 1; histVar <= numTens; histVar++){
             System.out.print("*");
            } 
          
          System.out.println();
          System.out.print("11: ");
-         for (int histVar = 0; histVar <= numElevens; histVar++){
+         for (int histVar = 1; histVar <= numElevens; histVar++){
             System.out.print("*");
            } 
          System.out.println();
          System.out.print("12: ");
-         for (int histVar = 0; histVar <= numTwelves; histVar++){
+         for (int histVar = 1; histVar <= numTwelves; histVar++){
             System.out.print("*");
            } 
          System.out.println();

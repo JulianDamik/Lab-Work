@@ -36,5 +36,23 @@ public class StudentList {
 		}
 		System.out.println("");
 		System.out.println("Longest name:" + longestName);
+		
+		for(i=1;i<NUM_STUDENTS;i++) {
+	        int j = 0;
+	        for(;j<i;j++) {
+	            if(studentList[j].length() > studentList[j+1].length()) {
+	                String temp = studentList[j];
+	                studentList[j] = studentList[j+1];
+	                studentList[j+1] = temp;
+	            }
+	        }
+	    }
+		System.out.println("");
+		
+		System.out.println("List sorted by length:");
+		
+		for(i = 0; i < NUM_STUDENTS; i++){
+			System.out.println(studentList[i]);
+		}
 	}
 }

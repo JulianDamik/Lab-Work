@@ -7,22 +7,12 @@ public class DiceStats {
       Scanner scnr = new Scanner(System.in);
       Random randGen = new Random();
       int i = 0;          // Loop counter iterates numRolls times
-      int numRolls = 0;   // User defined number of rolls
-      int numTwos = 0; 
-      int numThrees = 0; 
-      int numFours = 0; 
-      int numFives = 0; 
-      int numSixes = 0;   // Tracks number of 6s found
-      int numSevens = 0;  // Tracks number of 7s found
-      int numEights = 0; 
-      int numNines = 0; 
-      int numTens = 0; 
-      int numElevens = 0; 
-      int numTwelves = 0; 
+      
+      int[] rollTotals = new int[13];
+      
       int die1 = 0;       // Dice values
       int die2 = 0;       // Dice values
-      int rollTotal = 0;  // Sum of dice values
-
+      int numRolls = 0;
 
       System.out.println("Enter number of rolls: ");
       numRolls = scnr.nextInt();
@@ -33,125 +23,125 @@ public class DiceStats {
          for (i = 0; i < numRolls; ++i) {
             die1 = randGen.nextInt(6) + 1;
             die2 = randGen.nextInt(6) + 1;
-            rollTotal = die1 + die2;
+            rollTotals[0] = die1 + die2;
 
             // Count number of sixs and sevens
-              if (rollTotal == 2) {
-               numTwos = numTwos + 1;
+              if (rollTotals[0] == 2) {
+               rollTotals[0] = rollTotals[2] + 1;
             }
-             else if (rollTotal == 3) {
-               numThrees = numThrees + 1;
+             else if (rollTotals[0] == 3) {
+               rollTotals[1] = rollTotals[3] + 1;
             } 
-            else if (rollTotal == 4) {
-               numFours = numFours + 1;
+            else if (rollTotals[0] == 4) {
+               rollTotals[2] = rollTotals[4] + 1;
             }
-             else if (rollTotal == 5) {
-               numFives = numFives + 1;
+             else if (rollTotals[0] == 5) {
+               rollTotals[3] = rollTotals[5] + 1;
             }  
-              else if (rollTotal == 6) {
-               numSixes = numSixes + 1;
+              else if (rollTotals[0] == 6) {
+               rollTotals[4] = rollTotals[6] + 1;
             }
-            else if (rollTotal == 7) {
-               numSevens = numSevens + 1;
+            else if (rollTotals[0] == 7) {
+               rollTotals[5] = rollTotals[7] + 1;
             }
-             else if (rollTotal == 8) {
-               numEights = numEights + 1;
+             else if (rollTotals[0] == 8) {
+               rollTotals[6] = rollTotals[8] + 1;
             }
-             else if (rollTotal == 9) {
-               numNines = numNines + 1;
+             else if (rollTotals[0] == 9) {
+               rollTotals[7] = rollTotals[9] + 1;
             }
-             else if (rollTotal == 10) {
-               numTens = numTens + 1;
+             else if (rollTotals[0] == 10) {
+               rollTotals[8] = rollTotals[10] + 1;
             }
-             else if (rollTotal == 11) {
-               numElevens = numElevens + 1;
+             else if (rollTotals[0] == 11) {
+               rollTotals[9] = rollTotals[11] + 1;
             }
-             else if (rollTotal == 12) {
-               numTwelves = numTwelves + 1;
+             else if (rollTotals[0] == 12) {
+               rollTotals[10] = rollTotals[12] + 1;
             }
             System.out.println("Roll " + (i+1) + " is " + 
-                  rollTotal + " (" + die1 + 
+                  rollTotals[0] + " (" + die1 + 
                   "+" + die2 + ")");
          }
          
 
          // Print statistics on dice rolls
          System.out.println("\nDice roll statistics:");
-         System.out.println("2s: " + numTwos);
-         System.out.println("3s: " + numThrees);
-         System.out.println("4s: " + numFours);
-         System.out.println("5s: " + numFives);
-         System.out.println("6s: " + numSixes);
-         System.out.println("7s: " + numSevens);
-         System.out.println("8s: " + numEights);
-         System.out.println("9s: " + numNines);
-         System.out.println("10s: " + numTens);
-         System.out.println("11s: " + numElevens);
-         System.out.println("12s: " + numTwelves);
+         System.out.println("2s: " + rollTotals[2]);
+         System.out.println("3s: " + rollTotals[3]);
+         System.out.println("4s: " + rollTotals[4]);
+         System.out.println("5s: " + rollTotals[5]);
+         System.out.println("6s: " + rollTotals[6]);
+         System.out.println("7s: " + rollTotals[7]);
+         System.out.println("8s: " + rollTotals[8]);
+         System.out.println("9s: " + rollTotals[9]);
+         System.out.println("10s: " + rollTotals[10]);
+         System.out.println("11s: " + rollTotals[11]);
+         System.out.println("12s: " + rollTotals[12]);
 
          System.out.println("Dice roll histogram; ");
     
          System.out.print("2: ");
-         for (int histVar = 1; histVar <= numTwos; histVar++){
+         for (int histVar = 1; histVar <= rollTotals[2]; histVar++){
             System.out.print("*");
            } 
          
          System.out.println();
          System.out.print("3: ");
-         for (int histVar = 1; histVar <= numThrees; histVar++){
+         for (int histVar = 1; histVar <= rollTotals[3]; histVar++){
             System.out.print("*");
            } 
          
          System.out.println();
          System.out.print("4: ");
-         for (int histVar = 1; histVar <= numFours; histVar++){
+         for (int histVar = 1; histVar <= rollTotals[4]; histVar++){
             System.out.print("*");
            }
            
          System.out.println(); 
          System.out.print("5: ");
-         for (int histVar = 1; histVar <= numFives; histVar++){
+         for (int histVar = 1; histVar <= rollTotals[5]; histVar++){
             System.out.print("*");
            } 
          
          System.out.println();
          System.out.print("6: ");
-         for (int histVar = 1; histVar <= numSixes; histVar++){
+         for (int histVar = 1; histVar <= rollTotals[6]; histVar++){
             System.out.print("*");
            }  
         
          System.out.println();
          System.out.print("7: ");
-         for (int histVar = 1; histVar <= numSevens; histVar++){
+         for (int histVar = 1; histVar <= rollTotals[7]; histVar++){
             System.out.print("*");
            } 
         
          System.out.println();
          System.out.print("8: ");
-         for (int histVar = 1; histVar <= numEights; histVar++){
+         for (int histVar = 1; histVar <= rollTotals[8]; histVar++){
             System.out.print("*");
            } 
            
          System.out.println();
          System.out.print("9: ");
-         for (int histVar = 1; histVar <= numNines; histVar++){
+         for (int histVar = 1; histVar <= rollTotals[9]; histVar++){
             System.out.print("*");
            } 
 
          System.out.println();
          System.out.print("10: ");
-         for (int histVar = 1; histVar <= numTens; histVar++){
+         for (int histVar = 1; histVar <= rollTotals[10]; histVar++){
             System.out.print("*");
            } 
          
          System.out.println();
          System.out.print("11: ");
-         for (int histVar = 1; histVar <= numElevens; histVar++){
+         for (int histVar = 1; histVar <= rollTotals[11]; histVar++){
             System.out.print("*");
            } 
          System.out.println();
          System.out.print("12: ");
-         for (int histVar = 1; histVar <= numTwelves; histVar++){
+         for (int histVar = 1; histVar <= rollTotals[12]; histVar++){
             System.out.print("*");
            } 
          System.out.println();

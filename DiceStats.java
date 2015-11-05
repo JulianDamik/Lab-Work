@@ -41,7 +41,7 @@ public class DiceStats {
          
          System.out.println("Dice roll histogram; ");
     
-         for(j = 2; j < 13; j++){
+         for(j = 2; j < rollTotals.length; j++){
             System.out.print(j + ": ");
             for (int histVar = 1; histVar <= rollTotals[j]; histVar++){
                System.out.print("*");

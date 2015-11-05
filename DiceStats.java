@@ -26,17 +26,13 @@ public class DiceStats {
             die2 = randGen.nextInt(6) + 1;
             rollTotals[0] = die1 + die2;
 
-            for(j = 2; j < 13; j++){
-               if (rollTotals[0] == j) {
-               rollTotals[j] = rollTotals[j] + 1;
-               }
-            }
+            rollTotals[rollTotals[0]]++;
+                   
             System.out.println("Roll " + (i+1) + " is " + 
                   rollTotals[0] + " (" + die1 + 
                   "+" + die2 + ")");
          }
          
-
          // Print statistics on dice rolls
          System.out.println("\nDice roll statistics:");
          for(j = 2; j < 12; j++){

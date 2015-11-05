@@ -35,7 +35,7 @@ public class DiceStats {
          
          // Print statistics on dice rolls
          System.out.println("\nDice roll statistics:");
-         for(j = 2; j < 12; j++){
+         for(j = 2; j < rollTotals.length; j++){
             System.out.println(j + "s: " + rollTotals[j]);
          }
          

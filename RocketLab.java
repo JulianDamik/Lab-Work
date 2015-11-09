@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class RocketLab {
 
    public static void coneAndBottom(int rocketSize){
-      for (int line = 1; line <= rocketSize*2-1; line++){ // cone
+      for (int line = 1; line <= rocketSize*2-1; line++){ // cone/bottom
         for (int space = rocketSize*2-line; space >= 1; space--){
             System.out.print(" ");
             }

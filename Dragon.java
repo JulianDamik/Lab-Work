@@ -1,23 +1,20 @@
-
 public class Dragon {
 	private int wings;
 	private String color;
 	private String type;
-	private int health;
 	private int age;
+	private DragonAbilities dragonAbilities;
 	
 	public Dragon(){
 		wings = 0;
 		color = "";
 		type = "";
-		health = 0;
 		age = 0;
 	}
-	public Dragon(int wi, String col, String ty, int hlth, int ag){
+	public Dragon(int wi, String col, String ty, int ag){
 		wings = wi;
 		color = col;
 		type = ty;
-		health = hlth;
 		age = ag;
 	}
 	public int getNumWings(){
@@ -29,31 +26,33 @@ public class Dragon {
 	public String getType(){
 		return type;
 	}
-	public int getHealth(){
-		return health;
-	}
 	public int getAge(){
 		return age;
 	}
-	public void changeNumWings(int wi){
+	public void setNumWings(int wi){
 		wings = wi;
 	}
-	public void changeColor(String col){
+	public void setColor(String col){
 		color = col;
 	}
-	public void changeType(String ty){
+	public void setType(String ty){
 		type = ty;
 	}
-	public void baseHealth(int hlth){
-		health = hlth;
+   public void setAge(int ag){
+      age = ag;
+      }
+	public void setAbilities(DragonAbilities abilities){
+		dragonAbilities = abilities;
 	}
-	public void healthUp(int hlth){
-		health = health + hlth;
+	public DragonAbilities getAbilities(){
+		return dragonAbilities;
 	}
-	public void healthDown(int hlth){
-		health = health - hlth;
-	}
-	public void addAge(int ag){
-		age = age + ag;
+	public void print(){
+		System.out.println("Number of wings: " + wings);
+		System.out.println("Color: " + color);
+		System.out.println("Type: " + type);
+		System.out.println("Age (Years): " + age);
+		System.out.println("ABILITIES: " );
+		dragonAbilities.print();
 	}
 }

@@ -1,52 +1,62 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class DragonDriver {
-	
 	public static void main(String[] args) {
 		   Scanner scnr = new Scanner(System.in);
 		   
 		   int wings = 0;
 		   String color = "";
 		   String type = "";
-		   int health = 0;
 		   int age = 0;
 		   
-		   System.out.print("Enter number of wings: ");
-		   wings = scnr.nextInt();
+		   char flight = ' ';
+		   char breathAttack = ' ';
+		   char physicalAttack = ' ';
 		   
-		   System.out.print("Enter color: ");
-		   color = scnr.next();
+         
+         int i = 0;
+         System.out.println("Enter amount of dragons.");
+         i = scnr.nextInt();
 		   
-		   System.out.print("Enter type: ");
-		   type = scnr.next();
+         Dragon[] dragonArray = new Dragon[i];
+         
+         for(int j = 0; j < i; j++){
+            dragonArray[j] = new Dragon();
+
+            System.out.println();
+            System.out.println("Dragon" + (j + 1));
+            System.out.println("Enter number of wings: ");
+		      wings = scnr.nextInt();
 		   
-		   System.out.print("Enter amount of health: ");
-		   health = scnr.nextInt();
+		      System.out.println("Enter color: ");
+		      color = scnr.next();
 		   
-		   System.out.print("Enter age: ");
-		   age = scnr.nextInt();
+		      System.out.println("Enter type: ");
+		      type = scnr.next();
 		   
-		   Dragon dragon1 = new Dragon(wings, color, type, health, age);
+		      System.out.println("Enter age: ");
+		      age = scnr.nextInt();
 		   
-		   System.out.println("Wings: " + dragon1.getNumWings());
-		   System.out.println("Color: " + dragon1.getColor());
-		   System.out.println("Type: " + dragon1.getType() + " dragon");
-		   System.out.println("Health: " + dragon1.getHealth() + " HP");
-		   System.out.println("Age: " + dragon1.getAge() + " years");
-		   System.out.println();
-		   
-		   dragon1.changeNumWings(4);
-		   dragon1.changeColor("red");
-		   dragon1.changeType("fire");
-		   dragon1.baseHealth(5000);
-		   dragon1.healthUp(20);
-		   dragon1.healthDown(180);
-		   dragon1.addAge(3);
-		   
-		   System.out.println("Wings: " + dragon1.getNumWings());
-		   System.out.println("Color: " + dragon1.getColor());
-		   System.out.println("Type: " + dragon1.getType() + " dragon");
-		   System.out.println("Health: " + dragon1.getHealth() + " HP");
-		   System.out.println("Age: " + dragon1.getAge() + " years");
+		      System.out.println("Can the dragon fly? (Y or N) ");
+		      flight = scnr.next().charAt(0);
+		      System.out.println("Does the dragon have a breath attack? (Y or N) ");
+		      breathAttack = scnr.next().charAt(0);
+		      System.out.println("Can the dragon attack physically? (Y or N) (Use it's tail or claws to attack) ");
+		      physicalAttack = scnr.next().charAt(0);
+		      System.out.println();
+
+            dragonArray[j].setNumWings(wings);
+            dragonArray[j].setColor(color);
+            dragonArray[j].setType(type);
+            dragonArray[j].setAge(age);
+            
+            DragonAbilities abilities = new DragonAbilities(flight, breathAttack, physicalAttack);
+            dragonArray[j].setAbilities(abilities);
+
+            dragonArray[j].print();
+
+          }
+          
 	}	   
 }

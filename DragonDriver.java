@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class DragonDriver {
 	public static void main(String[] args) {

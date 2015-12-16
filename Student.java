@@ -43,6 +43,6 @@ public class Student extends Person {
    }
    @Override
 	public String toString(){
-		return super.toString() + "GPA: " + GPA + "\nID Number: " + IDNum + "\nSchool: " + schoolName + "\n" +"Classes Taking" + classesTaking;
+		return super.toString() + "\nGPA: " + GPA + "\nID Number: " + IDNum + "\nSchool: " + schoolName + "\nClasses Taking" + classesTaking;
 	}
 }

@@ -47,12 +47,7 @@ public class Dragon {
 	public DragonAbilities getAbilities(){
 		return dragonAbilities;
 	}
-	public void print(){
-		System.out.println("Number of wings: " + wings);
-		System.out.println("Color: " + color);
-		System.out.println("Type: " + type);
-		System.out.println("Age (Years): " + age);
-		System.out.println("ABILITIES: " );
-		dragonAbilities.print();
-	}
-}
+	public String toString(){
+      return "Wings: " + wings + "\nColor: " + color + "\nType: " + type + "\nAge: " + age + "\nAbilities: " + dragonAbilities;
+      }
+   }

@@ -33,11 +33,8 @@ public class DinhsDragonDriver{
       }
    
    for(int j = 0; j < i; j++){
-      System.out.println("Dragon" + (j+1) + "'s color: " + dragonArray[j].getColor() + ".");
-      System.out.println("Dragon" + (j+1) + "'s health: " + dragonArray[j].getHealth() + " HP.");
-      System.out.println("Dragon" + (j+1) + "'s age: " + dragonArray[j].getAge() + " Years.");
-      System.out.println();
-      }
+      System.out.println("Dragon" + (i+1) + dragonArray[i]);
+            }
       
    }
 }

@@ -53,7 +53,7 @@ public class DragonDriver {
             DragonAbilities abilities = new DragonAbilities(flight, breathAttack, physicalAttack);
             dragonArray[j].setAbilities(abilities);
 
-            dragonArray[j].print();
+            System.out.println(dragonArray[j]);
 
           }
           

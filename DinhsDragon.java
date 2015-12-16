@@ -56,7 +56,9 @@ public class DinhsDragon {
     public void decreaseHealth() {
         health -= 20;
     }
-
+   public String toString(){
+   return "Color: " + color + "\nAge: " + age + "\nHealth: " + health;
+   }
 }
 /* The code is good, but add things like the type of dragon, and what the dragon can do to attack.
 Also, the first constructor, have it set the color to nothing, an empty string, the health to 100 is fine,

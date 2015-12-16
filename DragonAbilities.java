@@ -31,9 +31,7 @@ public class DragonAbilities {
 	public char getPhysical(){
 		return physicalAttack;
 	}
-	public void print(){
-		System.out.println("Flight? " + flight);
-		System.out.println("Breath Attack? " + breathAttack);
-		System.out.println("Attack Physically? " + physicalAttack);
-	}
-}
+	public String toString(){
+      return "\nFlight: " + flight + "\nBreath Attack: " + breathAttack + "\nPhyical Attack: " + physicalAttack;
+      }
+   }

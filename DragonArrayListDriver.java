@@ -42,7 +42,7 @@ public class DragonArrayListDriver {
 		   
 		   for(int i = 0; i < dragonList.size(); i++){
 			   System.out.println("Dragon" + (i + 1));
-			   dragonList.get(i).print();
+			   System.out.println(dragonList.get(i));
 		   }
 		   
 	}	   

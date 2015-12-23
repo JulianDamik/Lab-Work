@@ -20,6 +20,10 @@ public class PersonDerivation {
       String scienceClass = " ";
       String otherClass = " ";
  
+      String shirt = " ";
+      String pants = " ";
+      String shoes = " ";
+      boolean jewelryAllowed = false;
       
       char pCont = ' ';
       char sCont = ' ';
@@ -84,6 +88,8 @@ public class PersonDerivation {
             
             System.out.println("What other class are they taking? (N/A if not taking) ");
 			   otherClass = scnr.next();
+            
+            //Add input for uniform
 			   
 			   studentList.add(new Student(fName, lName, age, weight, GPA, schoolName));
             

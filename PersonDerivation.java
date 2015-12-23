@@ -31,7 +31,7 @@ public class PersonDerivation {
       char sCont = ' ';
 
 		   
-		System.out.println("Do you want to create a person? (y or n) \n");
+		System.out.println("Do you want to create a person? (y or n)");
 		pCont = scnr.next().charAt(0);
       		
       while(pCont == 'y'){
@@ -50,11 +50,11 @@ public class PersonDerivation {
 			   Person person = new Person();
 			   personList.add(new Person(fName, lName, age, weight));
 			   
-			   System.out.println("Do you want to make another person? (y or n) \n");
+			   System.out.println("Do you want to make another person? (y or n)");
 			   pCont = scnr.next().charAt(0);
 		   }
          		
-      System.out.println("Do you want to create a student? (y or n) \n");
+      System.out.println("Do you want to create a student? (y or n)");
 		sCont = scnr.next().charAt(0);
       
       while(sCont == 'y'){
@@ -97,14 +97,16 @@ public class PersonDerivation {
             System.out.println("What academy is the student in?");
 			   academy = scnr.next();
 
+            scnr.nextLine();
+
             System.out.println("Describe the type of shirt that is needed for the shop uniform. (N/A if it does not matter) ");
-			   shirt = scnr.next();
+			   shirt = scnr.nextLine();
 
             System.out.println("Describe the type of pants that is needed for the shop uniform. (N/A if it does not matter) ");
-			   pants = scnr.next();
+			   pants = scnr.nextLine();
 
             System.out.println("Describe the type of shoes that is needed for the shop uniform. (N/A if it does not matter) ");
-			   shoes = scnr.next();
+			   shoes = scnr.nextLine();
 			   
             studentList.add(new ShopStudent(fName, lName, age, weight, GPA, schoolName, shopName, academy));
             
@@ -115,7 +117,7 @@ public class PersonDerivation {
             studentList.get(studentList.size()-1).setUniform(uniform);
             
 			   
-			   System.out.println("Do you want to make another student? (y or n) \n");
+			   System.out.println("Do you want to make another student? (y or n)");
 			   sCont = scnr.next().charAt(0);
 		   } 
               

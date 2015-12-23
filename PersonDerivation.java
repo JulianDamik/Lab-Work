@@ -4,7 +4,7 @@ public class PersonDerivation {
 	public static void main(String[] args){
       Scanner scnr = new Scanner(System.in);
 		ArrayList<Person> personList = new ArrayList<Person>();
-		ArrayList<Student> studentList = new ArrayList<Student>();
+		ArrayList<ShopStudent> studentList = new ArrayList<ShopStudent>();
       
       String fName;
 	   String lName;
@@ -20,10 +20,12 @@ public class PersonDerivation {
       String scienceClass = " ";
       String otherClass = " ";
  
+      String shopName = " ";
+      String academy = " ";
+ 
       String shirt = " ";
       String pants = " ";
       String shoes = " ";
-      boolean jewelryAllowed = false;
       
       char pCont = ' ';
       char sCont = ' ';
@@ -89,12 +91,29 @@ public class PersonDerivation {
             System.out.println("What other class are they taking? (N/A if not taking) ");
 			   otherClass = scnr.next();
             
-            //Add input for uniform
-			   
-			   studentList.add(new Student(fName, lName, age, weight, GPA, schoolName));
+            System.out.println("What shop is the student in? ");
+			   shopName = scnr.next();
             
-            ClassesTaking classes = new ClassesTaking(englishClass, mathClass, historyClass, scienceClass, otherClass);
+            System.out.println("What academy is the student in?");
+			   academy = scnr.next();
+
+            System.out.println("Describe the type of shirt that is needed for the shop uniform. (N/A if it does not matter) ");
+			   shirt = scnr.next();
+
+            System.out.println("Describe the type of pants that is needed for the shop uniform. (N/A if it does not matter) ");
+			   pants = scnr.next();
+
+            System.out.println("Describe the type of shoes that is needed for the shop uniform. (N/A if it does not matter) ");
+			   shoes = scnr.next();
+			   
+            studentList.add(new ShopStudent(fName, lName, age, weight, GPA, schoolName, shopName, academy));
+            
+			   ClassesTaking classes = new ClassesTaking(englishClass, mathClass, historyClass, scienceClass, otherClass);
             studentList.get(studentList.size() - 1).setClasses(classes);
+            
+            Uniform uniform = new Uniform(shirt, pants, shoes);
+            studentList.get(studentList.size()-1).setUniform(uniform);
+            
 			   
 			   System.out.println("Do you want to make another student? (y or n) \n");
 			   sCont = scnr.next().charAt(0);

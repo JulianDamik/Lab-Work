@@ -30,7 +30,7 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		ArrayList <Card> cards = new ArrayList <Card>();
+		cards = new ArrayList <Card>();
 		
 		for(int i = 0; i < suits.length; i++ ){
 			for(int j = 0; j < ranks.length; j++){
@@ -38,6 +38,7 @@ public class Deck {
 				cards.add(tempCard);
 			}
 		}
+		
 	}
 
 
